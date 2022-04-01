@@ -77,6 +77,13 @@ namespace TestProject1.WebObj
             throw new NotImplementedException();
         }
 
+        public int CountElements()
+        {
+            AssertIsOpen(_locator);
+            int amountOfElem = BrowserSelect.GetDriver().FindElements(_locator).Count();
+            return amountOfElem;
+        }
+
         public string GetAttribute(string attributeName)
         {
             throw new NotImplementedException();

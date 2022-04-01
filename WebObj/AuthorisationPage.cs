@@ -17,11 +17,11 @@ namespace TestProject1.WebObj
         private static readonly By HomeLbl = By.ClassName("wrapper-0-2-13");
         public AuthorisationPage() : base(HomeLbl, "Home Page") { }
 
-        public void Authorisation()
+        public void Authorisation(string email, string password)
         {
-            userNameFeild.SendKeys("roman_morozov181952@mail.ru");
+            userNameFeild.SendKeys(email);
             passButton.Click();
-            passFeild.SendKeys("a6wpS8056s");
+            passFeild.SendKeys(password);
             loginButton.Click();
         }
     }

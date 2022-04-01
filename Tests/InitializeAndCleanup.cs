@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 using TestProject1.WebDriver;
 
@@ -12,6 +13,8 @@ namespace TestProject1.Tests
     {
 
         protected static BrowserSelect Browser = BrowserSelect.Instance;
+
+        public TestContext TestContext { get; set; }
 
         [TestInitialize]
         public void SetupTest()

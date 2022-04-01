@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace TestProject1.WebDriver
                     {
                         var chromeOptions = new OpenQA.Selenium.Chrome.ChromeOptions();
                         chromeOptions.AddArgument("disable-infobars");
-                        driver = new OpenQA.Selenium.Chrome.ChromeDriver(chromeOptions);
+                        driver = new ChromeDriver(@"E:\epamst\ATStudy\TestProject1\Resources");
                         break;
                     }
                 case BrowserType.Firefox:
